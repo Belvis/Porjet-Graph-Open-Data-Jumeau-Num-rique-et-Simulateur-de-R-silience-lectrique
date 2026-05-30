@@ -13,7 +13,7 @@ dist/
 build/
 .eggs/
 
-# Données (fichiers trop volumineux pour GitHub)
+# Données brutes (trop volumineuses — télécharger depuis open data ENEDIS/INSEE)
 data/01_raw/*.csv
 data/01_raw/*.shp
 data/01_raw/*.shx
@@ -23,16 +23,14 @@ data/01_raw/*.cpg
 data/01_raw/*.qpj
 data/01_raw/CLC_RIDF_RGF_SHP/
 
+# Fichiers intermédiaires trop volumineux pour GitHub (>100 Mo)
 data/02_interim/*.geojson
-data/02_interim/*.gpkg
-data/02_interim/*.db
+data/02_interim/reseau_idf.gpkg
 
+# GeoJSON processés (régénérés par le pipeline)
 data/03_processed/*.geojson
-data/03_processed/*.parquet
-data/03_processed/*.db
 
-# Fichiers de base de données
-*.db
+# Fichiers SQLite hors dossier data/
 *.sqlite
 *.sqlite3
 
